@@ -51,11 +51,38 @@
           <v-card>
             <v-img :aspect-ratio="1" :src="character.image"></v-img>
 
-            <v-card-title class="text-truncate">{{
-              character.name
-            }}</v-card-title>
-
-            <v-card-subtitle> {{ character.species }} </v-card-subtitle>
+            <div class="d-flex align-center">
+              <div class="d-inline-flex flex-column overflow-hidden">
+                <v-card-title class="d-block text-truncate">{{
+                  character.name
+                }}</v-card-title>
+                <v-card-subtitle> {{ character.species }} </v-card-subtitle>
+              </div>
+              <div
+                class="
+                  d-inline-flex
+                  ml-auto
+                  align-center
+                  pa-4
+                  justify-end
+                  float-right
+                "
+                style="height: 100%"
+              >
+                {{ character.status }}
+                <i
+                  class="dot"
+                  :style="{
+                    background:
+                      character.status === 'Alive'
+                        ? 'green'
+                        : character.status === 'Dead'
+                        ? 'red'
+                        : 'gray',
+                  }"
+                ></i>
+              </div>
+            </div>
           </v-card>
         </v-lazy>
       </v-col>
@@ -206,5 +233,12 @@ export default {
     top: 64px;
     z-index: 10;
   }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 12px;
 }
 </style>
