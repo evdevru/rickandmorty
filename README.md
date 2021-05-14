@@ -1,5 +1,7 @@
 # app-rickandmorty
 
+Demo: https://rnmapi.herokuapp.com/  
+
 ## Build Setup
 
 ```bash
