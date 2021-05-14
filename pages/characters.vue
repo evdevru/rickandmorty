@@ -56,7 +56,9 @@
                 <v-card-title class="d-block text-truncate">{{
                   character.name
                 }}</v-card-title>
-                <v-card-subtitle> {{ character.species }} </v-card-subtitle>
+                <v-card-subtitle class="d-block text-truncate">
+                  {{ character.species }}
+                </v-card-subtitle>
               </div>
               <div
                 class="
